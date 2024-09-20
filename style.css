@@ -50,6 +50,9 @@
     font-size: 1.5rem;
     margin-top: 1rem;
   }
+  #swap-icon{
+     cursor: pointer;
+  }
   
   .select-container img {
     max-width: 2rem;
