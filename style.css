@@ -1,85 +1,159 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4e4ba;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4e4ba;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 45vh;
+  width: 40vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+form {
+  margin: 2rem 0 1rem 0;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.select-container img {
+  max-width: 2rem;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.select-container select {
+  font-size: 1rem;
+  width: auto;
+}
+
+.msg {
+  margin: 2rem 0 2rem 0;
+}
+
+form button {
+  height: 3rem;
+  background-color: #af4d98;
+  color: #fff;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #943b7e;
+}
+
+/* Media Queries for Laptop and Mobile Devices */
+
+/* Laptops (Screens 1024px and above) */
+@media (min-width: 1024px) {
   .container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    min-height: 45vh;
-    width: 40vh;
+    width: 50vh; /* Wider container for laptops */
+    padding: 2.5rem;
   }
-  
-  form {
-    margin: 2rem 0 1rem 0;
+
+  h2 {
+    font-size: 2.5rem; /* Larger heading */
   }
-  
-  form select,
-  button,
-  input {
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 0.75rem;
-  }
-  
+
   form input {
-    border: 1px solid lightgray;
-    font-size: 1rem;
-    height: 3rem;
-    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    height: 3.5rem;
   }
-  
+
+  form button {
+    font-size: 1.25rem;
+    height: 3.5rem;
+  }
+
+  .dropdown i {
+    font-size: 2rem; /* Bigger swap icon */
+  }
+}
+
+/* Mobile Devices (Screens 600px and below) */
+@media (max-width: 600px) {
+  .container {
+    width: 80vw; /* Make the container take most of the screen */
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
   .dropdown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+    flex-direction: column; /* Stack the dropdowns vertically */
+    align-items: flex-start;
   }
-  
+
   .dropdown i {
     font-size: 1.5rem;
-    margin-top: 1rem;
+    margin: 1rem 0; /* More spacing between dropdowns and icon */
+    align-self: center;
   }
-  #swap-icon{
-     cursor: pointer;
-  }
-  
-  .select-container img {
-    max-width: 2rem;
-  }
-  
+
   .select-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 6rem;
-    border-radius: 0.5rem;
-    border: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 1rem; /* Add spacing between dropdowns */
   }
-  
-  .select-container select {
+
+  form input {
     font-size: 1rem;
-    width: auto;
+    height: 2.5rem;
   }
-  
-  .msg {
-    margin: 2rem 0 2rem 0;
-  }
-  
+
   form button {
-    height: 3rem;
-    background-color: #af4d98;
-    color: #fff;
-    font-size: 1.15rem;
-    cursor: pointer;
+    font-size: 1rem;
+    height: 2.75rem;
   }
+}
